@@ -14,6 +14,10 @@ def chat_with_gpt(prompt):
 
     return response.choices[0].message.content.strip()
 
+def exit_command(input_text):
+    cleaned_input = input_text.translate(str.maketrans('', '', string.punctuation)).lower().strip()
+    return cleaned_input in ["quit", "exit", "bye"]
+
 if __name__ == "__main__":
 
     print("Hi! I'm PyChat, how can I help you today?")
