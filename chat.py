@@ -15,6 +15,9 @@ def chat_with_gpt(prompt):
     return response.choices[0].message.content.strip()
 
 if __name__ == "__main__":
+
+    print("Hi! I'm PyChat, how can I help you today?")
+
     while True:
         user_input = input("You: ")
         if user_input.lower() in ["quit", "exit", "bye"]:
